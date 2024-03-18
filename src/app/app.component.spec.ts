@@ -1,11 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [AppComponent, HttpClientTestingModule],
     }).compileComponents();
+    
   });
 
   it('should create the app', () => {
@@ -17,7 +20,7 @@ describe('AppComponent', () => {
   it(`should have the 'todo' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('todo');
+    expect(app.title).toEqual('Hello, todo');
   });
 
   it('should render title', () => {

@@ -1,0 +1,41 @@
+
+<p>{{ 123456 | number: '1.2' }}</p>
+
+<br><br>
+   
+<p>info-box works!</p>
+<p [hidden]="showHiddenFunction()">Hallo</p>
+
+<br>
+
+<button (click)="showOrHidden = !showOrHidden">Show / Hidden</button>
+
+
+<br><br>
+
+<p>X is: {{x}}</p>
+
+<br><br>
+
+<!-- <p>Name: {{userName}}</p> -->
+<!-- <p>NewName: {{newName}}</p> -->
+
+<br><br>
+<div style="border: 1px solid #eee; min-width: fit-content;">
+    <app-lifecycle [name]="newName"></app-lifecycle>
+</div>
+
+<br><br>
+
+<br><br>
+
+
+<ul>
+    @for (book of books$ | async; track $index) {
+        <li>{{book.title}}</li>
+        <small>{{book.subtitle}}</small>
+    } @empty {
+        <span style="color:red; font-size: large;">! Userlist not loaded !</span>
+    }
+</ul>
+
