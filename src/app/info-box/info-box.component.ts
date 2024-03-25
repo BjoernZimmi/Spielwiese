@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, ChangeDetectorRef, Component, DoCheck, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, ChangeDetectorRef, Component, DoCheck, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild, signal } from '@angular/core';
 import { BookDataService } from '../services/book-data.service';
 import { Books } from '../interfaces/books.interface';
 import { Observable } from 'rxjs';
@@ -21,6 +21,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class InfoBoxComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
   @ViewChild(LifecycleComponent) child!: LifecycleComponent;
+
+  title = signal('Hey');
 
   fg: FormGroup;
 
@@ -48,7 +50,11 @@ mynumber = 123456;
 
   ngOnInit(): void {
     this.howToFetch();
-    
+    this.change();
+  }
+
+  change() {
+    this.title.set('Bye');
   }
 
   howToFetch() {
