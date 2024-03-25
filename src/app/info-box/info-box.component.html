@@ -1,4 +1,4 @@
-<div style="width: 500px;">
+<div style="width: 500px;" [hidden]="showHiddenFunction()">
     <img src=".\assets\DACHPC_Logo_no_hands-white.svg">
 
     
@@ -13,10 +13,7 @@
 
 <br><br>
    
-<p>info-box works!</p>
-<p [hidden]="showHiddenFunction()">Hallo</p>
 
-<br>
 
 <button (click)="showOrHidden = !showOrHidden">Show / Hidden</button>
 
