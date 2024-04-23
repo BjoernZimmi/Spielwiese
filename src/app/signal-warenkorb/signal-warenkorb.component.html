@@ -1,0 +1,39 @@
+<h2>Unser Sortiment</h2>
+<p style="padding-left: 0.8em;">Mit Angular Signals</p>
+<div class="container">
+    <div class="child whiteBox">
+        <ul>
+            @for (item of sortiment; track $index) {
+            <li>{{item}} <button (click)="addItem(item)">+ Hinzufügen</button><br><br></li>
+            }
+        </ul>
+    </div>
+    <div class="child"></div>
+    <div class="child whiteBox" style="height: fit-content;">
+        <h3> Warenkorb
+            @if (warenkorb().length > 0) {({{warenkorb().length}} Artikel)}
+        </h3>
+        <ul>
+            @for (item of warenkorb(); track $index) {
+            <li>{{item}}</li>
+            } @empty {Keine Artikel im Warenkorb}
+        </ul>
+
+    </div>
+</div>
+
+<br>
+
+<p style="padding-left: 0.8em;">Mit BehaviorSubject / async</p>
+<div class="container">
+    <div class="child whiteBox">
+        <ul>
+            <button [disabled]="i >= datainfo.length" (click)="addItemNew()">+ Neuer Artikel</button>
+            <br><br>
+            @for (item of list | async; track $index) {
+            <li>{{item}} <button (click)="addItem(item)">+ Hinzufügen</button><br><br></li>
+            }
+        </ul>
+
+    </div>
+</div>

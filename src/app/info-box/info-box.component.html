@@ -1,7 +1,7 @@
 <div style="width: 500px;" [hidden]="showHiddenFunction()">
     <img src=".\assets\DACHPC_Logo_no_hands-white.svg">
 
-    
+
 </div>
 
 <br><br>
@@ -11,8 +11,8 @@
 <br><br>
 <p>{{ 123456 | number: '1.2' }}</p>
 
-<br><br>
-   
+<br> <br>
+
 
 
 <button (click)="showOrHidden = !showOrHidden">Show / Hidden</button>
@@ -25,12 +25,12 @@
 <br><br>
 
 <!-- <p>Name: {{userName}}</p> -->
-<!-- <p>NewName: {{newName}}</p> -->
+<p>NewName: {{newName}}</p>
 
-<br><br>
+<!-- <br><br>
 <div style="border: 1px solid #eee; min-width: fit-content;">
-    <app-lifecycle [name]="newName"></app-lifecycle>
-</div>
+    <app-lifecycle [name]="newName" #lifecycle></app-lifecycle>
+</div> -->
 
 <br><br>
 
@@ -39,10 +39,9 @@
 
 <ul>
     @for (book of books$ | async; track $index) {
-        <li>{{book.title}}</li>
-        <small>{{book.subtitle}}</small>
+    <li>{{book.title}}</li>
+    <small>{{book.subtitle}}</small>
     } @empty {
-        <span style="color:red; font-size: large;">! Userlist not loaded !</span>
+    <span style="color:red; font-size: large;">! Userlist not loaded !</span>
     }
 </ul>
-

@@ -1,4 +1,4 @@
-export class TodoService {
+export class SpielwieseService {
     data: Array<any> = [
         {
             title: "Prepare Workshop",

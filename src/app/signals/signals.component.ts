@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, signal } from '@angular/core';
 
 @Component({
@@ -9,11 +10,24 @@ import { Component, OnInit, signal } from '@angular/core';
 })
 export class SignalsComponent implements OnInit {
 
+  setTitle = "Angular Signals";
+
   invoice = signal([]);
+
+  titleAsSignal = signal(this.setTitle);
+
+  constructor(private http: HttpClient) {
+
+  }
+
 
 ngOnInit(): void {
   console.log(this.invoice);
-  
+  this.titleAsSignal;
+}
+
+apiFunction() {
+this.http.get('./../')
 }
 
 }

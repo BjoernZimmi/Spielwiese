@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { it } from 'node:test';
 
 
 describe('AppComponent', () => {
@@ -11,22 +12,23 @@ describe('AppComponent', () => {
     
   });
 
-  it('should create the app', () => {
+  fit('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'todo' title`, () => {
+  it(`should have the 'spielwiese' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Hello, todo');
+    expect(app.title).toEqual('Hello, Spielwiese');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, todo');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Spielwiese');
   });
+
 });

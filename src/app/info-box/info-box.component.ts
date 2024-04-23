@@ -9,18 +9,18 @@ import { FormControl, FormGroup } from '@angular/forms';
 
 
 @Component({
-    selector: 'app-info-box',
-    standalone: true,
-    templateUrl: './info-box.component.html',
-    styleUrl: './info-box.component.css',
-    imports: [AsyncPipe, LifecycleComponent, CommonModule]
+  selector: 'app-info-box',
+  standalone: true,
+  templateUrl: './info-box.component.html',
+  styleUrl: './info-box.component.css',
+  imports: [AsyncPipe, LifecycleComponent, CommonModule]
 })
 
 
 
 export class InfoBoxComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
-  @ViewChild(LifecycleComponent) child!: LifecycleComponent;
+  @ViewChild('lifecycle') child!: LifecycleComponent;
 
   title = signal('Hey');
 
@@ -35,7 +35,7 @@ export class InfoBoxComponent implements OnChanges, OnInit, DoCheck, AfterConten
   newName: string = " Test Name ";
 
   x: number = 0;
-mynumber = 123456;
+  mynumber = 123456;
 
   constructor(private bookData: BookDataService, private cd: ChangeDetectorRef) {
     this.books$ = this.bookData.getBooks(this.bookUrl);
@@ -59,7 +59,7 @@ mynumber = 123456;
 
   howToFetch() {
     const fetchPromise = fetch(this.bookUrl);
-    
+
     console.log(fetchPromise);
 
     fetchPromise.then((response) => {
