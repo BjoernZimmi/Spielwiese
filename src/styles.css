@@ -2,4 +2,25 @@
 html {
     background-color: black;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+.container {
+    display: flex;
+  }
+  
+  .child {
+    flex: 1;
+  }
+
+  h3, h1, h2 {
+    padding-left: 0.5em;
+  }
+  
+  .whiteBox {
+    border-color: white;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-radius: 30px;
+    max-width: 300px;
+  }
