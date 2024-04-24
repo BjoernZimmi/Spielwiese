@@ -10,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Hello, Spielwiese';
+  title = 'Die Spielwiese';
   text = "Additional Info-Text on our Info Box! 🎊";
 
   test: String = new String;

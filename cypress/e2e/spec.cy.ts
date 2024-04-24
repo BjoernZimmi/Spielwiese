@@ -6,8 +6,17 @@ describe('When Angular starting page is loaded', () => {
 
   it('has app title, shows proper command by default and reacts on command changes', () => {
 
-    cy.contains('Hello, Spielwiese');
-    cy.get('h1').should('contain','Hello, Spielwiese');
+    cy.contains('Die Spielwiese');
+    cy.get('h1').should('contain','Die Spielwiese');
 
+  })
+
+
+})
+
+describe('', () => {
+  it('should return the page title of Signals', () => {
+    cy.visit('/signals');
+    cy.get('h1').should('contain', 'Angular Signals');
   })
 })
