@@ -4,6 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "cy:run": "cypress run",
+    "e2e:ci": "start-server-and-test start http://localhost:4200 cy:run",
     "api": "npx bookmonkey-api",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
