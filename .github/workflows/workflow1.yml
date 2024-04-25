@@ -12,8 +12,8 @@ jobs:
       # - run: npx bookmonkey-api
   # run-build:
   #   runs-on: ubuntu-latest
-  #   steps:
-  #     - run: npm run build
+    # steps:
+      - run: npm run build
   # start-unit-test:
   #   - run: npm run test
   # start-e2e-test:
