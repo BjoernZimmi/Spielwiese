@@ -10,7 +10,6 @@ jobs:
   runs-on: ubuntu-latest
   steps:
     - run: ng test
-jobs: 
   start-e2e-test:
   runs-on: ubuntu-latest
   steps:
