@@ -9,9 +9,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20.9.0
-
       - name: unit-tests
-        uses: npm run test
+        run: npm run test
 
 
 
