@@ -13,6 +13,7 @@ jobs:
   # run-build:
   #   runs-on: ubuntu-latest
     # steps:
+      - uses: npm@5
       - name: Install dependencies
         run: npm ci
   # start-unit-test:
