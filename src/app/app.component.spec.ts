@@ -9,7 +9,6 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent, HttpClientTestingModule],
     }).compileComponents();
-    
   });
 
   fit('should create the app', () => {

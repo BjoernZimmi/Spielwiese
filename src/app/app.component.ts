@@ -9,6 +9,7 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
   title = 'Die Spielwiese';
   text = "Additional Info-Text on our Info Box! 🎊";
@@ -17,7 +18,6 @@ export class AppComponent {
 
   constructor() {
     // console.log(this.test);
-    
   }
 }
  
