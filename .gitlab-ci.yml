@@ -2,3 +2,26 @@ stages:
 - build
 - test
 - deploy
+
+variables:
+  END: "Job is done"
+
+
+job1:
+  stage: build
+  script:
+    - "build-script"
+    - echo $END
+
+job2: 
+  stage: test
+    - "test-script"
+    - echo $END
+
+
+job3:
+  stage: deploy 
+    - "deploy-script"
+    - echo $END
+
+runs-on: self-hosted
