@@ -1,57 +1,20 @@
-# name: Start Push-Workflow
-# run-name: ${{ github.actor }} is Pushing his branch
-# on: [push]
-# jobs:
-#   build-application:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/setup-node@v4
-#         with:
-#           node-version: '20'
-
-#       # - run: npm install
-#       # - run: npx bookmonkey-api
-#   # run-build:
-#   #   runs-on: ubuntu-latest
-#   #   steps:
-#   #     - run: npm run build
-#   # start-unit-test:
-#   #   - run: npm run test
-#   # start-e2e-test:
-#   #   - run: npm run e2e
-
-name: Angular Build
-
-# {1}
+name: Start Push-Workflow
+run-name: ${{ github.actor }} is Pushing his branch
 on: [push]
-
 jobs:
-  angular:
-    name: Angular Build
+  build-application:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
-      # {2}
-      - name: Checkout the source code
-        uses: actions/checkout@v3
-
-      # {3}
-      - name: Setup Node.js $
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: $
-          cache: 'npm'
-          cache-dependency-path: package-lock.json
-
-      # {4}
-      - name: Install dependencies
-        run: npm ci
-      # {5}
-      - name: Run tests
-        run: npm run test:ci
-      # {6}
-      - name: Build
-        run: npm run build
+          node-version: '20'
+      # - run: npm install
+      # - run: npx bookmonkey-api
+  # run-build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: npm run build
+  # start-unit-test:
+  #   - run: npm run test
+  # start-e2e-test:
+  #   - run: npm run e2e
