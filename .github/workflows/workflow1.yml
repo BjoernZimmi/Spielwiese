@@ -13,7 +13,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: package-lock.json
       - name: unit-tests
-        run: npm run test
+        run: ng test
 
 
 
