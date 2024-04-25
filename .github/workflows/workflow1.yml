@@ -5,8 +5,8 @@ jobs:
   build-application:
     runs-on: ubuntu-latest
     steps:
-      - run: ng buid
+      - run: npm run build
   start-unit-test:
-    - run: ng test
+    - run: npm run test
   start-e2e-test:
     - run: npm run e2e
