@@ -2,12 +2,17 @@ name: Start Push-Workflow
 run-name: ${{ github.actor }} is Pushing his branch
 on: [push]
 jobs:
-  check-bats-version:
+  build-application:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: npm install -g bats
-      - run: bats -v
+      - run: ng buid
+jobs: 
+  start-unit-test:
+  runs-on: ubuntu-latest
+  steps:
+    - run: ng test
+jobs: 
+  start-e2e-test:
+  runs-on: ubuntu-latest
+  steps:
+    - run:  npm run e2e
