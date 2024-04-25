@@ -8,6 +8,7 @@ jobs:
       # - run: npm i
       - run: npx bookmonkey-api
   run-build:
+    runs-on: ubuntu-latest
     steps:
       - run: npm run build
   # start-unit-test:
