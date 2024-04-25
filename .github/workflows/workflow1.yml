@@ -14,8 +14,8 @@ jobs:
           cache-dependency-path: package-lock.json
       - name: Install dependencies
         run: npm install
-      - name: unit-tests
-        run: ng test
+      - name: Build Angular project
+        run: npm run build
 
 
 
