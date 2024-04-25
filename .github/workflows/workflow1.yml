@@ -5,7 +5,7 @@ jobs:
   build-application:
     runs-on: ubuntu-latest
     steps:
-      - run: npm i
+      # - run: npm i
       - run: npm run build
   # start-unit-test:
   #   - run: npm run test
