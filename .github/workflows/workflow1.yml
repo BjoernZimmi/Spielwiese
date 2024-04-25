@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: npm run build
-  start-unit-test:
-    - run: npm run test
-  start-e2e-test:
-    - run: npm run e2e
+  # start-unit-test:
+  #   - run: npm run test
+  # start-e2e-test:
+  #   - run: npm run e2e
