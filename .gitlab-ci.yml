@@ -14,8 +14,13 @@ job1:
     - echo $END
 
 job2: 
-  stage: test
-    - "test-script"
+  stage: unit-test
+    - "unit-test-script"
+    - echo $END
+
+job2: 
+  stage: e2e-test
+    - "e2e-test-script"
     - echo $END
 
 
