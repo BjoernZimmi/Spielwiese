@@ -6,7 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: ng buid
-jobs: 
   start-unit-test:
   runs-on: ubuntu-latest
   steps:
