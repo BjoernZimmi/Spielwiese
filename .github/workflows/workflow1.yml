@@ -5,7 +5,7 @@ jobs:
   build-application:
     runs-on: ubuntu-latest
     steps:
-      - run: npm install
+      - uses: actions/setup-node@v4
       # - run: npx bookmonkey-api
   run-build:
     runs-on: ubuntu-latest
