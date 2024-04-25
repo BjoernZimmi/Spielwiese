@@ -13,7 +13,7 @@ jobs:
   # run-build:
   #   runs-on: ubuntu-latest
     # steps:
-      - run: npm run build
+      - run: npm install
   # start-unit-test:
   #   - run: npm run test
   # start-e2e-test:
