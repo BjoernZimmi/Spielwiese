@@ -1,13 +1,17 @@
 name: Start Push-Workflow
-run-name: ${{ github.actor }} is Pushing his branch
+run-name: ${{ github.actor }} is pushing his branch
 on: [push]
 jobs:
-  build-application:
+  install_packages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v3
         with:
-            node-version: '20'
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
       # - run: npx bookmonkey-api
   # run-build:
   #   runs-on: ubuntu-latest
