@@ -9,6 +9,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20.9.0
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
       - name: unit-tests
         run: npm run test
 
