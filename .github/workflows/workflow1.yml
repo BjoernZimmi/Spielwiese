@@ -7,8 +7,6 @@ jobs:
     steps:
       - run: ng buid
   start-unit-test:
-  steps:
     - run: ng test
   start-e2e-test:
-  steps:
-    - run:  npm run e2e
+    - run: npm run e2e
