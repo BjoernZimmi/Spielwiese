@@ -7,10 +7,8 @@ jobs:
     steps:
       - run: ng buid
   start-unit-test:
-  runs-on: ubuntu-latest
   steps:
     - run: ng test
   start-e2e-test:
-  runs-on: ubuntu-latest
   steps:
     - run:  npm run e2e
