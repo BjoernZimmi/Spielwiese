@@ -1,32 +1,35 @@
-stages:
-- build
-- test
-- deploy
+# stages:
+# - build
+# - unit-test
+# - e2e-test
 
-variables:
-  END: "Job is done"
-
-
-job1:
-  stage: build
-  script:
-    - "build-script"
-    - echo $END
-
-job2: 
-  stage: unit-test
-    - "unit-test-script"
-    - echo $END
-
-job2: 
-  stage: e2e-test
-    - "e2e-test-script"
-    - echo $END
+# variables:
+#   END: "Job is done"
 
 
-job3:
-  stage: deploy 
-    - "deploy-script"
-    - echo $END
+# job1:
+#   stage: build
+#   script:
+#     - ng build
+#     - echo $END
 
-runs-on: self-hosted
+# job2: 
+#   stage: unit-test
+#     script:
+#     - ng test
+#     - echo $END
+
+# job3: 
+#   stage: e2e-test
+#     script:
+#     - npm run e2e
+#     - echo $END
+
+
+# # job4:
+# #   stage: deploy 
+# #     script:
+# #     - ng build
+# #     - echo $END
+
+# runs-on: self-hosted
