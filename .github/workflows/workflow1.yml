@@ -12,20 +12,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20.9.0
-          cache: 'npm'
+          # cache: 'npm'
           cache-dependency-path: package-lock.json
       - name: Install dependencies
         run: npm install
       - name: Build Angular project
         run: npm run build --configuration=$ENVIRONMENTS
-      # - name: Run e2e
-      #   run: npm run e2e
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
           build: npm run build
           start: npm start
-
-
-  # start-e2e-test:
-  #   - run: npm run e2e
