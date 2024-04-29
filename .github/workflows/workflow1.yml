@@ -19,11 +19,11 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build Angular project
-        run: npm run build -- --configuration=$ENVIRONMENTS
+        run: npm run build --configuration=$ENVIRONMENTS
       # - name: Run tests
       #   run: npm run test
 
-
+      
           # cache: 'npm'
           # cache-dependency-path: package-lock.json
       # - name: Install dependencies
