@@ -14,6 +14,8 @@ jobs:
           node-version: 20.9.0
           cache: 'npm'
           cache-dependency-path: package-lock.json
+      - name: start API
+        run: npm run api
       - name: Install dependencies
         run: npm install
       - name: Build Angular project
