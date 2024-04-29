@@ -3,7 +3,7 @@ import { defineConfig } from 'cypress'
 export default defineConfig({
   
   e2e: {
-    'baseUrl': 'http://localhost:4200'
+    'baseUrl': 'http://localhost:35287'
   },
   
   
@@ -12,7 +12,7 @@ export default defineConfig({
       framework: 'angular',
       bundler: 'webpack',
     },
-    specPattern: '**/*.cy.ts'
-  }
+    specPattern: '**/*.cy.ts',
+  },
   
-})
+}) 
