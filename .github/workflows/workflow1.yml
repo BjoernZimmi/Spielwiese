@@ -13,7 +13,7 @@ jobs:
       - name: Build Angular project
         run: npm run build --configuration=$ENVIRONMENTS
       - name: Unit-Test
-        run: npm run ci-test
+        run: npm run test
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
