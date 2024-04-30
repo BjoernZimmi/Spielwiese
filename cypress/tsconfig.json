@@ -6,5 +6,5 @@
   "include": [
     "**/*.ts"
   ],
-  "exclude": []
+  "exclude": ["src/**/*.spec.ts"]
 }
