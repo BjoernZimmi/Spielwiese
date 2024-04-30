@@ -23,3 +23,5 @@ jobs:
         with:
           build: npm run build
           start: npm start
+      - name: Unit-Test
+        run: npm run e2e
