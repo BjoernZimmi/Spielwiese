@@ -26,7 +26,7 @@ describe('InfoBoxComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component)['toBeTruthy']();
   });
 
   // it('should return books per Rest-Api', () => {
