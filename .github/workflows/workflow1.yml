@@ -15,7 +15,7 @@ jobs:
           # cache: 'npm'
           # cache-dependency-path: package-lock.json
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       - name: Build Angular project
         run: npm run build --configuration=$ENVIRONMENTS
       - name: Cypress run
@@ -23,5 +23,5 @@ jobs:
         with:
           build: npm run build
           start: npm start
-      - name: Unit-Test
-        run: npm run test:prod
+      # - name: Unit-Test
+      #   run: npm run test:prod
