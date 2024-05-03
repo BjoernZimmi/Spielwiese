@@ -1,4 +1,4 @@
-export default function(config) {
+exports = function(config) {
     config.set({
       frameworks: ['mocha', 'chai'],
       files: ['test/**/*.js'],
