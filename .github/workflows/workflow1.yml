@@ -22,4 +22,6 @@ jobs:
       - name: run mocha  
         run: npm i --save-dev mocha chai
       - name: Unit-Test
-        run: npm run karma start --single-run --browsers ChromeHeadless karma.conf.js
+        run: npm run test
+      - name: Unit-Test 2
+        run: ng test
