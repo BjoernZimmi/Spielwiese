@@ -17,7 +17,9 @@ jobs:
         with:
           build: npm run build
           start: npm start
-      # - name: Run Karma 
-      #   run: npm i -D puppeteer karma-chrome-launcher
+      - name: Run Karma Config
+        run: npm i --save-dev karma karma-chrome-launcher karma-mocha karma-chai
+      - name: run mocha  
+        run: npm i --save-dev mocha chai
       - name: Unit-Test
-        run: ng test --watch=false --browsers=ChromeHeadless
+        run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
