@@ -22,4 +22,4 @@ jobs:
       - name: run mocha  
         run: npm i --save-dev mocha chai
       - name: Unit-Test
-        run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+        run: npm run karma start --single-run --browsers ChromeHeadless karma.conf.js
