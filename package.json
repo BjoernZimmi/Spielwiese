@@ -12,6 +12,7 @@
     "test": "ng test",
     "serve:ssr:spielwiese": "node dist/spielwiese/server/server.mjs",
     "e2e": "ng e2e",
+    "coverage": "ng test — watch false",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
   },
